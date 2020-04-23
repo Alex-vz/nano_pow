@@ -1,3 +1,5 @@
+# coding: utf-8
+
 from django.db import models
 
 # Create your models here.
@@ -15,7 +17,7 @@ class Location(models.Model):
         verbose_name_plural = "Места нахождения"
 
     def __str__(self):
-        return name
+        return self.name
 
 
 class TaraType(models.Model):
@@ -30,7 +32,7 @@ class TaraType(models.Model):
         verbose_name_plural = "Типы упаковки"
 
     def __str__(self):
-        return name
+        return self.name
 
 
 class CollectPoint(models.Model):
@@ -45,7 +47,7 @@ class CollectPoint(models.Model):
         verbose_name_plural = "Точки сбора продукции"
 
     def __str__(self):
-        return name
+        return self.name
 
 
 class NanoPowder(models.Model):
@@ -77,6 +79,6 @@ class NanoPowder(models.Model):
         verbose_name_plural = "Выпуски нанопорошка"
 
     def __str__(self):
-        return label_text
+        return self.label_text
 
 
